@@ -15,19 +15,19 @@
     >
       <el-tab-pane label="微信支付">
         <span slot="label" class="span-tap">
-          <img src="../assets/wechat.png" height="20" width="20" style="marginRight: 10px;" /> 微信支付
+          <img src="../assets/wechat.png" height="20" width="20" style="marginRight: 10px;" /> {{data[0].title}}
         </span>
         <div class="pay-qr">
-          <span>请使用微信扫码支付</span>
+          <span>{{data[0].tip}}</span>
           <img src="../assets/qr_wechat.png" height="120" width="120" />
         </div>
       </el-tab-pane>
       <el-tab-pane label="支付宝支付">
         <span slot="label" class="span-tap">
-          <img src="../assets/alipay.png" height="20" width="20" style="marginRight: 10px;" /> 支付宝支付
+          <img src="../assets/alipay.png" height="20" width="20" style="marginRight: 10px;" />  {{data[1].title}}
         </span>
         <div class="pay-qr">
-          <span>请使用支付宝扫码支付</span>
+          <span> {{data[1].tip}}</span>
           <img src="../assets/qr_alipay.png" height="120" width="120" />
         </div>
       </el-tab-pane>
@@ -38,7 +38,7 @@
 <script>
 export default {
   props: {
-    msg: String
+    data: Object
   },
   data() {
     return {

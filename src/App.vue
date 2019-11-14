@@ -89,7 +89,8 @@
               />
             </li>
           </div>
-          <PayCpt />
+          <!-- 支付组件 -->
+          <PayCpt :data="payData"/>
         </div>
       </el-tab-pane>
       <el-tab-pane label="开通会员" name="second">
@@ -141,6 +142,14 @@ export default {
       input2: "",
       selectedIndex: 0,
       curSelect: null,
+      payData:[{
+        title:'微信支付',
+        tip:'请使用微信扫码支付'
+      },{
+        title:'支付宝支付',
+        tip:'请使用支付宝扫码支付'
+      }
+      ],
       payList: [
         {
           id: 1,
